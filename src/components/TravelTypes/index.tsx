@@ -8,12 +8,15 @@ export function TravelTypes() {
       w="100%"
       h="80"
       mt="6"
-      bg="gray.500"
       align="center"
       justify="center"
     >
-      <HStack spacing="40">
+      <HStack spacing="40" mr="10">
         <TravelIcon name="cocktail">vida noturna</TravelIcon>
+        <TravelIcon name="surf">praia</TravelIcon>
+        <TravelIcon name="building">moderno</TravelIcon>
+        <TravelIcon name="museum">clássico</TravelIcon>
+        <TravelIcon name="earth">e mais...</TravelIcon>
       </HStack>
     </Flex>
   );

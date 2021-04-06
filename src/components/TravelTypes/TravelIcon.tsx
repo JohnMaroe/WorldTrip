@@ -1,4 +1,4 @@
-import { Image, Box, Text } from "@chakra-ui/react";
+import { Image, Stack, Text } from "@chakra-ui/react";
 
 interface TravelIconProps {
   name: string;
@@ -7,9 +7,22 @@ interface TravelIconProps {
 
 export function TravelIcon({ name, children }: TravelIconProps) {
   return (
-    <Box>
-      <Image src={`/icons/${name}.svg`} alt={`${name.charAt(0).toUpperCase() + name.slice(1)} Icon`} />
-      <Text>{children}</Text>
-    </Box>
+    <Stack
+      align="center"
+      spacing="5"
+    >
+      <Image 
+        src={`/icons/${name}.svg`} 
+        alt={`${name.charAt(0).toUpperCase() + name.slice(1)} Icon`} 
+        w="20"
+      />
+      <Text
+        fontWeight="bold"
+        color="gray.700"
+        fontSize="20"
+      >
+        {children}
+      </Text>
+    </Stack>
   );
 }

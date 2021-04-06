@@ -5,10 +5,11 @@ export default class MyDocument extends Document {
     return(
       <Html>
         <Head>
+          <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
+          <meta charSet="utf-8" />
+
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /> 
-
-          <link rel="shortcut icon" type="image/svg" href="/icon/Airplane.svg" />
         </Head>
         <body>
           <Main />
