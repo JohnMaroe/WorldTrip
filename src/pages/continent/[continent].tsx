@@ -1,38 +1,59 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { Flex, Box, Stack, Heading } from '@chakra-ui/react';
+import { Flex, HStack, Text, Image } from '@chakra-ui/react';
+import { GetServerSideProps } from 'next';
 
-import { api } from '../../services/api';
+import { getData } from '../api/fetchContinent';
+
+import { ContinentDataTypes } from '../../types';
 
 import { Header } from "../../components/Header";
 import { ContinentBanner } from "../../components/ContinentBanner";
-import { useEffect, useState } from 'react';
+import { ContinentInformation } from "../../components/ContinentInformation";
+import { FamousCities } from "../../components/FamousCities";
 
-export default function Continent() {
-  const [continentData, setContinentData] = useState([]);
+interface ContinentProps {
+  data: ContinentDataTypes;
+}
 
-  const router = useRouter();
-  const continent = String(router.query.continent);
-
-  useEffect(() => {
-    api.get(`continents/?continentName=${continent}`).then(response => {
-      setContinentData(response.data);
-      console.log(continentData)
-    });
-  }, []);
-
+export default function Continent({ data }: ContinentProps) {
   return (
     <>
       <Head>
-        <title>{continent.charAt(0).toUpperCase() + continent.slice(1)} | WorldTrip</title>
+        <title>{data.continentName} | WorldTrip</title>
       </Head>
 
       <Flex direction="column">
         <Header isInsideAPage={true} />
 
-        <ContinentBanner />
+        <ContinentBanner 
+          continentImage={data.continentImage}
+          continentName={data.continentName}
+        />
 
+        <ContinentInformation 
+          paragraph={data.paragraph}
+          information={{
+            countryNumber: data.countryNumber, 
+            languageNumber: data.languageNumber, 
+            cities100: data.cities100
+          }}
+        />
+
+        <FamousCities countries={data.countries} />
       </Flex>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const jsonData = await getData();
+
+  const data: ContinentDataTypes[] = jsonData.data;
+  const returnData: ContinentDataTypes = data.find(element => element.continentName === context.params.continent);
+
+  return {
+    props: {
+      data: returnData,
+    },
+  }
 }

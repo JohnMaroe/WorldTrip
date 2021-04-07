@@ -1,10 +1,11 @@
-import { useRouter } from 'next/router';
-import { Flex, Heading, Image, Text, Stack, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 
-export function ContinentBanner() {
-  const router = useRouter();
-  const continent = String(router.query.continent);
+interface ContinentBannerProps {
+  continentImage: string;
+  continentName: string;
+}
 
+export function ContinentBanner({ continentImage, continentName }: ContinentBannerProps) {
   return (
     <Flex
       w="100%"
@@ -12,13 +13,13 @@ export function ContinentBanner() {
       px={["0","0","36"]}
       pt={["0","0","72"]}
       mt="6"
-      // bgImage={`url('${continent.banner_image}')`}
-      bgImage={`url('/Background.png')`}
+      bgImage={`url('${continentImage}')`}
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
       align="center"
       justify={["center", "center", "flex-start"]}
+      style={{ boxShadow: 'inset 0 0 0 50vw rgba(0,0,0,0.5)' }}
     >
       <Heading
         textAlign={["center", "left"]}
@@ -26,7 +27,7 @@ export function ContinentBanner() {
         color="gray.50"
         fontWeight="500"
       >
-        {continent.charAt(0).toUpperCase() + continent.slice(1)}
+        {continentName}
       </Heading>
     </Flex>
   );
