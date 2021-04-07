@@ -2,12 +2,24 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Flex, Box, Stack, Heading } from '@chakra-ui/react';
 
+import { api } from '../../services/api';
+
 import { Header } from "../../components/Header";
 import { ContinentBanner } from "../../components/ContinentBanner";
+import { useEffect, useState } from 'react';
 
 export default function Continent() {
+  const [continentData, setContinentData] = useState([]);
+
   const router = useRouter();
   const continent = String(router.query.continent);
+
+  useEffect(() => {
+    api.get(`continents/?continentName=${continent}`).then(response => {
+      setContinentData(response.data);
+      console.log(continentData)
+    });
+  }, []);
 
   return (
     <>
@@ -20,16 +32,6 @@ export default function Continent() {
 
         <ContinentBanner />
 
-        <Heading
-          textAlign="center"
-          fontWeight="500"
-          mb={["5","14"]}
-          fontSize={["lg","3xl","4xl"]}
-          color="gray.700"
-          mt="8"
-        >
-          Vamos nessa?<br/>Então escolha seu continente
-        </Heading>
       </Flex>
     </>
   )

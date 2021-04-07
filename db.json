@@ -1,0 +1,244 @@
+{
+  "continents": [
+    { 
+      "continentId": 1,
+      "continentName": "Europa",
+      "continentImage": "",
+      "description": "O continente mais antigo.",
+      "paragraph": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
+      "countryNumber": 44,
+      "languageNumber": 200,
+      "cities100": 32,
+      "countries": [
+        {
+          "countryId": 1,
+          "countryName": "Reino Unido",
+          "countryCity": "Londres",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 2,
+          "countryName": "França",
+          "countryCity": "Paris",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 3,
+          "countryName": "Itália",
+          "countryCity": "Roma",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 4,
+          "countryName": "República Tcheca",
+          "countryCity": "Praga",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 5,
+          "countryName": "Holanda",
+          "countryCity": "Amsterdã",
+          "countryImage": "",
+          "countryFlag": ""
+        }
+      ]
+    },
+    { 
+      "continentId": 2,
+      "continentName": "África",
+      "continentImage": "",
+      "description": "O continente mais diverso.",
+      "paragraph": "",
+      "countryNumber": 54,
+      "languageNumber": 1700,
+      "cities100": 12,
+      "countries": [
+        {
+          "countryId": 1,
+          "countryName": "Egito",
+          "countryCity": "Cairo",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 2,
+          "countryName": "África do Sul",
+          "countryCity": "Cidade do Cabo",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 3,
+          "countryName": "Tanzânia",
+          "countryCity": "Zanzibar",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 4,
+          "countryName": "Tanzânia",
+          "countryCity": "Zanzibar",
+          "countryImage": "",
+          "countryFlag": ""
+        }
+      ]
+    },
+    { 
+      "continentId": 3,
+      "continentName": "América do Norte",
+      "continentImage": "",
+      "description": "O continente mais antigo.",
+      "paragraph": "",
+      "countryNumber": 23,
+      "languageNumber": 165,
+      "cities100": 10,
+      "countries": [
+        {
+          "countryId": 1,
+          "countryName": "Estados Unidos",
+          "countryCity": "Nova York",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 2,
+          "countryName": "Canada",
+          "countryCity": "Toronto",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 3,
+          "countryName": "México",
+          "countryCity": "Cancún",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 4,
+          "countryName": "Cuba",
+          "countryCity": "Havana",
+          "countryImage": "",
+          "countryFlag": ""
+        }
+      ]
+    },
+    { 
+      "continentId": 4,
+      "continentName": "América do Sul",
+      "continentImage": "",
+      "description": "O continente mais antigo.",
+      "paragraph": "",
+      "countryNumber": 14,
+      "languageNumber": 448,
+      "cities100": 3,
+      "countries": [
+        {
+          "countryId": 1,
+          "countryName": "Brasil",
+          "countryCity": "Rio de Janeiro",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 2,
+          "countryName": "Peru",
+          "countryCity": "Lima",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 3,
+          "countryName": "Argentina",
+          "countryCity": "Buenos Aires",
+          "countryImage": "",
+          "countryFlag": ""
+        }
+      ]
+    },
+    { 
+      "continentId": 5,
+      "continentName": "Ásia",
+      "continentImage": "",
+      "description": "O maior continente.",
+      "paragraph": "",
+      "countryNumber": 55,
+      "languageNumber": 2300,
+      "cities100": 43,
+      "countries": [
+        {
+          "countryId": 1,
+          "countryName": "Japão",
+          "countryCity": "Tokyo",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 2,
+          "countryName": "Corei do Sul",
+          "countryCity": "Seul",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 3,
+          "countryName": "Índia",
+          "countryCity": "Delhi",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 4,
+          "countryName": "China",
+          "countryCity": "Macau",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 5,
+          "countryName": "Filipinas",
+          "countryCity": "Cebu",
+          "countryImage": "",
+          "countryFlag": ""
+        }
+      ]
+    },
+    { 
+      "continentId": 6,
+      "continentName": "Oceania",
+      "continentImage": "",
+      "description": "O menor continente.",
+      "paragraph": "",
+      "countryNumber": 22,
+      "languageNumber": 200,
+      "cities100": 3,
+      "countries": [
+        {
+          "countryId": 1,
+          "countryName": "Austrália",
+          "countryCity": "Sydney",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 2,
+          "countryName": "Nova Zelândia",
+          "countryCity": "Auckland",
+          "countryImage": "",
+          "countryFlag": ""
+        },
+        {
+          "countryId": 3,
+          "countryName": "Fiji",
+          "countryCity": "Suva",
+          "countryImage": "",
+          "countryFlag": ""
+        }
+      ]
+    }
+  ]
+}
