@@ -1,4 +1,5 @@
 import { Flex, Avatar, Image, Text } from "@chakra-ui/react";
+import { SpinnerIcon } from '@chakra-ui/icons'
 
 import { CountriesTypes } from '../../types';
 
@@ -42,11 +43,11 @@ export function CityCard({ countryInformation }: CityCardProps) {
           </Text>
           <Text color="gray.300">{countryInformation.countryName}</Text>
         </Flex>
-        <Avatar 
-          name={countryInformation.countryName}
+        <Avatar
           src={countryInformation.countryFlag}
           w="10"
           h="10"
+          icon={<SpinnerIcon fontSize="1.5rem" />}
         />
       </Flex>
     </Flex>

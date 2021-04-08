@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Flex, HStack, Text, Image } from '@chakra-ui/react';
+import { Flex, Stack } from '@chakra-ui/react';
 import { GetServerSideProps } from 'next';
 
 import { getData } from '../api/fetchContinent';
@@ -30,16 +30,18 @@ export default function Continent({ data }: ContinentProps) {
           continentName={data.continentName}
         />
 
-        <ContinentInformation 
-          paragraph={data.paragraph}
-          information={{
-            countryNumber: data.countryNumber, 
-            languageNumber: data.languageNumber, 
-            cities100: data.cities100
-          }}
-        />
+        <Stack justify="center" align="center" spacing={["8", "12"]}>
+          <ContinentInformation 
+            paragraph={data.paragraph}
+            information={{
+              countryNumber: data.countryNumber, 
+              languageNumber: data.languageNumber, 
+              cities100: data.cities100
+            }}
+          />
 
-        <FamousCities countries={data.countries} />
+          <FamousCities countries={data.countries} />
+        </Stack>
       </Flex>
     </>
   )

@@ -17,17 +17,16 @@ export function FamousCities({ countries }: FamousCitiesProps) {
       w={1220}
     >
       <Heading
-        color="gray.800"
-        mb="8"
+        color="gray.700"
+        mb={["8", "14"]}
         fontWeight="medium"
       >
         Cidades Famosas
       </Heading>
 
       <Grid 
-        templateColumns={`repeat(4, 1fr)`}
-        templateRows={countries.length > 4 ? "repeat(2, 1fr)" : "1fr"}
-        gap={6}
+        templateColumns={["1fr", "1fr", `repeat(4, 1fr)`]}
+        gap={[4, 6, 8]}
       >
         { countries.map(country => (
           <CityCard

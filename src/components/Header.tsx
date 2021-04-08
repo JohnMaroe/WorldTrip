@@ -26,7 +26,8 @@ export function Header({ isInsideAPage=false }: HeaderProps) {
             <ChevronLeftIcon 
               w={8} 
               h={8} 
-              transform="translateX(-20rem) translateY(-0.75rem)" 
+              color="gray.500"
+              transform={["translateX(-7.5rem) translateY(-0.75rem)", "translateX(-20rem) translateY(-0.75rem)"]}
               position="absolute" 
             />
           </a>
