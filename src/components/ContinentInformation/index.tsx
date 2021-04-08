@@ -24,17 +24,17 @@ export function ContinentInformation({ paragraph, information }: ContinentInform
     >
       <Text
         fontWeight="normal"
-        w={[400, 500]}
+        w={[300, 500]}
         mr={[null, "40"]}
         mb={["12", null]}
-        fontSize={["18", "20"]}
+        fontSize={["17", "20"]}
         color="gray.700"
-        align={["center", "justify"]}
+        align="justify"
       >
         {paragraph}
       </Text>
       
-      <HStack spacing={["16", "24"]} align="center">
+      <HStack spacing={["14", "24"]} align="center">
         <Block type="países">{information.countryNumber}</Block>
         <Block type="línguas">{information.languageNumber}</Block>
         <Block type="cidades">{information.cities100}</Block>

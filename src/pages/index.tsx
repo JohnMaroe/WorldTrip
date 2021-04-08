@@ -1,12 +1,20 @@
 import Head from 'next/head'
+import { GetServerSideProps } from 'next';
 import { Flex, Box, Stack, Heading } from '@chakra-ui/react';
+
+import { getData } from './api/fetchContinent';
+import { ContinentDataTypes } from '../types';
 
 import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
 import { TravelTypes } from "../components/TravelTypes";
 import { Slider } from "../components/Slider";
 
-export default function Home() {
+interface HomeProps {
+  continents: ContinentDataTypes[];
+}
+
+export default function Home({ continents }: HomeProps) {
   return (
     <>
       <Head>
@@ -34,8 +42,20 @@ export default function Home() {
           Vamos nessa?<br/>Então escolha seu continente
         </Heading>
 
-        <Slider />
+        <Slider continents={continents} />
       </Flex>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const jsonData = await getData();
+
+  const continents: ContinentDataTypes[] = jsonData.data;
+
+  return {
+    props: {
+      continents,
+    },
+  }
 }

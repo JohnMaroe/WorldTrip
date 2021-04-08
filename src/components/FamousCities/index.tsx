@@ -12,9 +12,10 @@ export function FamousCities({ countries }: FamousCitiesProps) {
   return (
     <Flex
       direction="column"
+      align="center"
       justify="center"
       mx="auto"
-      w={1220}
+      w={[270, 1220]}
     >
       <Heading
         color="gray.700"
@@ -27,6 +28,7 @@ export function FamousCities({ countries }: FamousCitiesProps) {
       <Grid 
         templateColumns={["1fr", "1fr", `repeat(4, 1fr)`]}
         gap={[4, 6, 8]}
+        mb={["6", "28"]}
       >
         { countries.map(country => (
           <CityCard

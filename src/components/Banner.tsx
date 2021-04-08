@@ -4,9 +4,8 @@ export function Banner() {
   return (
     <Box
       w="100%"
-      h="80"
+      h={["60", "80"]}
       mt="6"
-      bg="gray.500"
       bgImage="url('/Background.png')"
       bgPosition="center"
       bgSize="cover"
@@ -16,16 +15,21 @@ export function Banner() {
         align="center"
         justify="center"
       >
-        <Stack spacing="8" mr="48">
+        <Stack 
+          spacing={["5", "8"]} 
+          mr={["0", "0", "48"]} 
+          mt={["7", null]}
+          p={["5", null]}
+        >
           <Text
             fontWeight="normal"
-            fontSize="36"
+            fontSize={["26", "36"]}
             color="gray.50"
           >
             5 Continentes, <br/>infinitas possibilidades.
           </Text>
           <Text
-            fontSize="18"
+            fontSize={["12", "18"]}
             color="gray.100"
           >
             Chegou a hora de tirar do papel a viagem que você <br/>sempre sonhou.
@@ -36,8 +40,8 @@ export function Banner() {
           src="/icons/Airplane.svg" 
           alt="Airplane icon" 
           transform="translateY(48px)"
-          w={["300px","300px","300px","430px"]}
-          display={['none','none','block']}
+          w={["300px", "300px", "430px"]}
+          display={['none', 'none', 'block']}
         />
       </Flex>
     </Box>

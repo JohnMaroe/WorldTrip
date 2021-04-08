@@ -17,26 +17,31 @@ export function Block({ type, children }: BlockProps) {
         {children}
       </Text>
 
-      <Text fontSize={["14", "18"]} fontWeight="bold" color="gray.700">
-        {type === "cidades" 
-          ? (
-            <Flex align="center" justify="center">
-              <Text>cidades</Text>
-              <Tooltip 
-                label="Números de cidades nesse continente que estão dentre as 100 mais visitadas do mundo."
-                hasArrow 
-                arrowSize={10}
-                closeDelay={300}
-                p="5"
-                borderRadius="8"
-              >
-                <InfoOutlineIcon fontSize={["12", "14"]} ml={["1", "2"]} />
-              </Tooltip>
-            </Flex>
-          ) 
-          : type
-        }
-      </Text>
+      {type === "cidades" 
+        ? (
+          <Flex align="center" justify="center">
+            <Text fontSize={["14", "18"]} fontWeight="bold" color="gray.700">
+              cidades
+            </Text>
+            <Tooltip 
+              label="Números de cidades nesse continente que estão dentre as 100 mais visitadas do mundo."
+              hasArrow 
+              arrowSize={10}
+              closeDelay={300}
+              p="5"
+              borderRadius="8"
+            >
+              <InfoOutlineIcon fontSize={["12", "14"]} ml={["1", "2"]} />
+            </Tooltip>
+          </Flex>
+        ) 
+        : (
+          <Text fontSize={["14", "18"]} fontWeight="bold" color="gray.700">
+            {type}
+          </Text>
+        )
+      }
+      
     </Flex>
   );
 }
